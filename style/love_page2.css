@@ -1,0 +1,80 @@
+:root {
+  --pink-bg: #ffeaf3;
+  --pink-main: #ffd6e6;
+  --pink-deep: #ff9fc2;
+  --white: #ffffff;
+  --shadow: rgba(255, 143, 183, 0.35);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: var(--pink-bg);
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.wrapper {
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.gif {
+  width: 300px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+  margin-top: -10px;
+  font-size: 25px;
+  color: #6d4b57;
+  font-weight: 700;
+}
+
+.handle {
+  color: #9e7a89;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.btn {
+  font-family: 'Quicksand', sans-serif;
+  background: var(--pink-deep);
+  color: var(--pink-bg);
+  font-weight: 600;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 10px;
+  font-size: 15px;
+  box-shadow: 0 6px 15px var(--shadow);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background: var(--pink-deep);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 143, 183, 0.4);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* animasi */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
