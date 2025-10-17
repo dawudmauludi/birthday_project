@@ -20,78 +20,66 @@
     align-items: center;
     margin: 0 auto;
     height: max-content;
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 .container_text{
     width: 100%;
-    text-align: left;
+    text-align: center;
     background-color: transparent;
 }   
 
 .happy_birthday_text_header{
-    font-size: 30px;
+    font-size: 20px;
     padding: 10px;
     border-radius: 10px;
     background-color: var(--pink-bg);
     font-weight: bold;
     color: var(--pink-deep);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
-
-
 
 .container_content{
     width: 100%;
     height: max-content;
     background-color: var(--pink-bg);
-    margin-top: 20px;
+    margin-top: 5px;
     border-radius: 10px;
     overflow: hidden;
+    background-color: white;
 }
 
-.image_header{
-    width: 100%;
-    padding: 4px;
-    overflow: hidden;
+.image_header_text_only {
+    width: 100%;       /* atur lebar */
+    height: 100px;      /* atur tinggi */
     border-radius: 10px;
-    position: relative;
-}
-
-.image_birthday_cake{
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-}
-
-.text_image_overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pink-deep); /* nanti ini background */
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text_image_overlay {
+    text-align: left;    /* teks rata kiri */
+    margin-left: -100px;   /* bisa diubah sesuai kebutuhan */
 }
 
 .overlay_text {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.8em;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em;
     color: var(--white);
     font-weight: bold;
-    text-align: left;
-    padding: 0 20px; 
+    margin-bottom: 2px;  /* jarak bawah antar teks */
 }
 
 .overlay_text_description {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.2em;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
     color: var(--white);
-    text-align: left;
-    padding: 0 20px; 
+    line-height: 1.5;    /* jarak antar baris */
 }
 
 .container_button{
@@ -104,21 +92,21 @@
     padding: 10px;
 }
 
-
-.button_styles{
+.button_styles {
+    font-family: 'Quicksand', sans-serif;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
     background-color: var(--white);
     color: var(--pink-deep);
-    font-size: 1.1em;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 10px 10px var(--shadow);
     transition: all 0.3s ease;
 }
 
-
+/* Saat tombol aktif */
 .button_styles.active {
     background-color: var(--pink-deep); 
     color: var(--white);
@@ -126,9 +114,16 @@
     transform: translateY(-2px); 
 }
 
+/* Efek saat hover */
+.button_styles:hover {
+    background-color: var(--pink-deep);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 15px rgba(255, 143, 183, 0.45);
+}
 
 .text_made_with_love{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Quicksand', sans-serif;
     font-size: 0.9em;
     color: black;
     text-align: center;
@@ -137,7 +132,7 @@
 }
 
 .text_with_name{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Quicksand', sans-serif;
     font-size: 1em;
     color: black;
     text-align: center;
@@ -149,115 +144,49 @@
     display: none;
 }
 
-.profile_section{
+.profile_section {
+    background-color: var(--pink-deep); /* ganti background */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 15px;
     margin-top: 15px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.profile_image_container{
-    padding: 20px;
+.profile_image_container {
+    padding: 0; /* hapus padding negatif */
     flex-shrink: 0;
 }
 
-.profile_image{
+.profile_image {
     border-radius: 10px;
     border: 5px dashed var(--white);
     display: block;
+    width: 80%;      /* bisa diatur dari container */
+    max-width: 170px; /* maksimal ukuran gambar */
+    margin-left: 20px;
+    margin-right: -20px;
+    height: auto;     /* otomatis menyesuaikan tinggi agar proporsional */
+    object-fit: cover; /* memastikan gambar tetap proporsional */
 }
 
+
 .profile_title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--pink-deep);
+  font-family: 'Quicksand', sans-serif;
+    color: white;
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 8px;
 }
 
 .profile_description {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--pink-deep);
+  font-family: 'Quicksand', sans-serif;
+    color: white;
     font-size: 1em;
     line-height: 1.6;
 }
-
-
-
-
-.readMe_section {
-    position: relative;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-    min-height: 400px; 
-}
-
-.readMe_view {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    transition: opacity 0.4s ease-in-out;
-}
-
-.readMe_view.hidden {
-    display: none; 
-}
-
-
-#readMeEnvelopeView {
-    flex-direction: column;
-}
-
-.envelope_container {
-    position: relative;
-    cursor: pointer;
-}
-
-.envelope_image {
-    width: 500px;
-}
-
-.play_icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 4em;
-    color: rgba(255, 255, 255, 0.7);
-    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    pointer-events: none; 
-}
-
-.close_button {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 30px;
-    height: 30px;
-    background-color: var(--white);
-    color: var(--pink-deep);
-    border-radius: 50%; /* Membuatnya bulat */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
-    z-index: 10; /* Pastikan di atas gambar amplop */
-}
-
-.close_button:hover {
-    transform: scale(1.1);
-}
-
 
 .postcard_view {
     position: absolute;
@@ -285,78 +214,247 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.readMe_image_container{
+/* --- ReadMe / Amplop horizontal --- */
+.readMe_view {
+    background-color: var(--pink-deep);
     padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row; /* horizontal: gambar kiri, teks kanan */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    color: white;
+    position: relative; /* untuk tombol close */
+    transition: all 0.3s ease;
+}
+
+.readMe_image_container {
     flex-shrink: 0;
 }
 
-.readMe_image{
-    border-radius: 10px;
+.readMe_image {
+    border-radius: 15px;
     border: 5px dashed var(--white);
-    display: block;
+    width: 100px;
+    max-width: 20%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.readMe_image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 143, 183, 0.5);
+}
+
+.readMe_text_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }
 
 .readMe_title {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--pink-deep);
+    font-family: 'Quicksand', sans-serif;
+    color: white;
     font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 8px;
 }
 
 .readMe_description {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--pink-deep);
+    font-family: 'Quicksand', sans-serif;
+    color: white;
     font-size: 1em;
     line-height: 1.6;
 }
 
-.button_styles_readMe{
-    padding: 10px 20px;
+/* Tombol Read Me / COLLECT */
+.button_styles_readMe {
+    font-family: 'Quicksand', sans-serif;
+    padding: 8px 25px;
     border: none;
-    margin-top: 10px;
     border-radius: 10px;
     background-color: var(--white);
     color: var(--pink-deep);
-    font-size: 1.1em;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 10px 10px var(--shadow);
+    box-shadow: 0 8px 15px var(--shadow);
     transition: all 0.3s ease;
+    align-self: flex-start; /* supaya tombol di bawah teks */
+    margin-top: 10px;
 }
+
+.button_styles_readMe:hover {
+    background-color: var(--pink-main);
+    color: var(--pink-deep);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 15px rgba(255, 143, 183, 0.45);
+}
+
+/* Tombol close amplop / postcard */
+.close_button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.close_button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.envelope_container {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;           /* beri jarak atas-bawah */
+}
+
+/* Container amplop saat terbuka */
+.readMeEnvelopeView {
+    display: flex;
+    flex-direction: column; /* Agar amplop dan teks bisa diatur terpisah */
+}
+
+/* Amplop terbuka */
+.envelope_image {
+margin-left: 150px;
+    width: 300px;       /* ukuran lebih kecil */
+    max-width: 75%;     /* responsive */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover efek amplop */
+.envelope_image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 143, 183, 0.5);
+}
+
+/* Postcard overlay */
+.readMePostcardView {
+    display: flex;
+    position: fixed;          /* tetap di layar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* latar belakang gelap */
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.readMePostcardView.hidden {
+    display: none; /* tetap tersembunyi sampai dihapus oleh JS */
+}
+
+.postcard_image {
+    margin-left: 130px;
+    width: 300px;        /* ukuran lebih kecil */
+    max-width: 75%;      /* responsive */
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover efek postcard */
+.postcard_image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+#closePostcardButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* --- Responsif untuk tablet / mobile --- */
+@media (max-width: 992px) {
+    .readMe_view {
+        flex-direction: column; /* gambar di atas teks untuk tablet */
+        align-items: center;
+        text-align: center;
+    }
+    
+    .button_styles_readMe {
+        align-self: center;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .readMe_view {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .readMe_image {
+        width: 150px;
+    }
+
+    .readMe_text_container {
+        gap: 8px;
+    }
+}
+
 
 .hidden{
     display: none;
 }
 
-.horzontal_paraloid{
-    width: 300px;
-    border: 2px solid black;
-    margin: 1px auto;
-    box-shadow: 0px 10px 15px rgba(0,0,0,0.9);
-    z-index: 9999999;
+.horzontal_paraloid {
+    width: 100px;
+    border: 1.5px solid var(--pink-deep);
+    border-radius: 10px;
+    margin: 0 auto -1px;
 }
+
 .photostrip_viewer {
-    width: 250px; 
+    width: 80px;
     height: 350px;
-    margin: 0px auto ;
-    overflow: hidden; 
+    margin: 0 auto;
+    overflow: hidden; /* sembunyikan bagian yang keluar */
     position: relative;
+    background-color: transparent;
+        margin-bottom: -75px;
 }
 
-
-.photostrip_reel {
-    display: flex;
-    flex-direction: column;
-    transform: translateY(-100%); 
+.photostrip_single {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: translateY(-100%); /* mulai di atas */
+    animation: dropEffect 2s ease-out forwards; /* animasi turun */
 }
 
-@keyframes printEffect {
-    from {
+@keyframes dropEffect {
+    0% {
         transform: translateY(-100%);
+        opacity: 0;
     }
-    to {
+    50% {
+        opacity: 1;
+    }
+    100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -373,183 +471,218 @@
     box-sizing: border-box; 
 }
 
-.button_collect {
-    display: block;
-    margin: 10px auto 15px;
-    padding: 8px 30px;
-    border: none;
-    background-color: #333;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
+/* ===== RESPONSIVE CLEAN & PROPORSIONAL ===== */
 
-.button_collect:hover {
-    background-color: var(--pink-deep);
-}
-
-
-#modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    animation: fadeInOverlay 0.6s ease forwards;
-}
-
-#collectedView {
-    position: absolute;
-    width: 300px;
-    top: 100%;
-    left: 50%;
-    padding: 20px;
-    text-align: center;
-    transform: translate(-500%, -500%) scale(0.9);
-    opacity: 0;
-    animation: fadeInUp 0.8s ease forwards, floating 3s ease-in-out infinite;
-}
-
-#collectedView img {
-    max-width: 80%;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    transition: transform 0.4s ease;
-}
-
-#collectedView img:hover {
-    transform: scale(1.05);
-}
-
-@keyframes fadeInOverlay {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -55%) scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-@keyframes floating {
-    0%, 100% {
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        transform: translate(-50%, -52%) scale(1.02);
-    }
-}
-
-
-
-
+/* Tablet (max-width: 992px) */
 @media (max-width: 992px) {
     .container {
-        width: 70%;
-        margin-top: 8%;
+        width: 80%;
+        margin-top: 5%;
+    }
+
+    .happy_birthday_text_header {
+        font-size: 1.3em;
+        padding: 6px 10px;
+    }
+
+    .container_content {
+        margin-top: 8px;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .overlay_text {
+        font-size: 1.1em;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .overlay_text_description {
+        font-size: 0.95em;
+        text-align: center;
     }
 
     .container_button {
         flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .profile_section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile_image_container {
-        padding: 10px;
-    }
-
-    .profile_image {
-        width: 150px;
-    }
-
-    .readMe_section {
-        flex-direction: column;
-    }
-
-    .readMe_image_container img {
-        width: 150px;
-    }
-
-    .envelope_image {
-        width: 350px;
-    }
-
-    .postcard_image {
-        max-width: 100%;
-    }
-}
-
-/* Mobile (max-width 600px) */
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-        margin-top: 15%;
-    }
-
-    .happy_birthday_text_header {
-        font-size: 1.4em;
-        text-align: center;
-    }
-
-    .image_header img {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    .overlay_text {
-        font-size: 1.4em;
-        padding: 10px;
-    }
-
-    .overlay_text_description {
-        font-size: 1em;
-        padding: 10px;
+        gap: 15px;
+        justify-content: center;
     }
 
     .button_styles {
-        font-size: 0.9em;
-        padding: 8px 15px;
+        font-size: 0.85em;
+        padding: 6px 12px;
     }
 
     .profile_section {
         flex-direction: column;
         text-align: center;
         gap: 10px;
+        padding: 15px;
+    }
+
+    .profile_title {
+        font-size: 15px;
+    }
+
+    .profile_description {
+        font-size: 12px;
+                margin: 10px;
+    }
+
+    .readMe_title {
+                font-size: 15px;
+    }
+
+    .readMe_description {
+                font-size: 12px;
+        margin: 10px;
     }
 
     .profile_image {
         width: 120px;
+        max-width: 120px;
+        margin: 0 auto;
     }
 
-    .readMe_section {
+    .readMe_view {
         flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
     }
 
-    .envelope_image {
-        width: 280px;
+    .readMe_image {
+        width: 120px;
+        max-width: 40%;
     }
 
+    .envelope_image,
     .postcard_image {
-        width: 90%;
+        width: 200px;
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .photostrip_viewer {
+        width: 60px;
+        height: 250px;
+        margin-bottom: -40px;
+    }
+
+    .button_styles_readMe {
+        margin-top: -10px;
+        font-size: 10px;
+    }
+}
+
+/* ===== SEMUA MASUK DARI BAWAH SERENTAK ===== */
+@keyframes slideUpFadeSmooth {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Terapkan ke semua elemen utama tanpa delay */
+.happy_birthday_text_header,
+.overlay_text,
+.overlay_text_description,
+.container_content,
+.button_styles {
+    animation: slideUpFadeSmooth 1.2s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin-top: 8%;
+    }
+
+    .happy_birthday_text_header {
+        margin-top: 50px;
+        width: 80%;
+        font-size: 14px;
+        padding: 10px 10px;
+        margin-left: 35px;
+    }
+
+    .container_content {
+        width: 85%;
+        margin-top: 5px;
+        padding: 8px;
+    }
+
+    .overlay_text {
+                padding-left: 100px;
+        font-size: 15px;
+    }
+
+    .overlay_text_description {
+        font-size: 10px;
+        padding-left: 100px;
+    }
+
+    .container_button {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button_styles {
+        font-size: 0.8em;
+        padding: 10px 60px;
+    }
+
+    .profile_section {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .profile_image {
+        width: 100px;
+        max-width: 100px;
+        margin: 0 auto;
+    }
+
+    .readMe_view {
+        flex-direction: column;
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .readMe_image {
+        width: 100px;
+        max-width: 35%;
+    }
+
+    .envelope_image,
+    .postcard_image {
+        width: 180px;
+        max-width: 55%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .text_made_with_love,
     .text_with_name {
-        font-size: 0.9em;
+        font-size: 0.8em;
+    }
+
+    .photostrip_viewer {
+        width: 50px;
+        height: 200px;
+        margin-bottom: -30px;
+    }
+
+    .photostrip_reel img {
+        padding: 3px 3px 10px 3px;
     }
 }

@@ -60,27 +60,3 @@ keys.forEach(key => {
 updateDots();
 updateDisplay();
 
-document.addEventListener("DOMContentLoaded", () => {
-  const audio = document.getElementById("bg-music");
-  if (!audio) return;
-
-  audio.volume = 0;
-
-  const playMusic = () => {
-    audio.play().then(() => {
-      let vol = 0;
-      const fade = setInterval(() => {
-        if (vol < 0.4) {
-          vol += 0.02;
-          audio.volume = vol;
-        } else {
-          clearInterval(fade);
-        }
-      }, 200);
-    }).catch(err => console.log("Autoplay blocked:", err));
-  };
-
-  document.body.addEventListener("click", () => {
-    playMusic();
-  }, { once: true });
-});

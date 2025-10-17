@@ -3,81 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday</title>
+    <title>Happy Birthday Feliciana Iskandar</title>
     <link rel="stylesheet" href="style/index.css">
     <script src="https://kit.fontawesome.com/e582aba65f.js" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <div class="container">
         <div class="container_text">
-            <p class="happy_birthday_text_header">Happy Birthday!</p>
+            <p class="happy_birthday_text_header">Happy Birthday Feliciana Iskandar</p>
         </div>
 
         <div class="container_content">
-        <div class="image_header">
-            <img src="assets/03.jpeg" alt="birthday_cake" class="image_birthday_cake" width="500px">
+<div class="image_header_text_only">
+    <div class="text_image_overlay">
+        <p class="overlay_text">Happy 19th!</p>
+        <p class="overlay_text_description">
+           You’re not just growing older — you’re leveling up. <br> Keep shining, chasing dreams, and making every moment count! <br>
+        </p>
+    </div>
+</div>
 
-            <div class="text_image_overlay">
-                <p class="overlay_text">hi, twenties!</p>
-                <p class="overlay_text_description">Wishing you a day filled with
-                    <br>
-                    love joy and all the things that
-                    <br>
-                    make you happiness. 💖
-                </p>
-            </div>
-        </div>
 
         <div class="container_button">
             <button id="profileButton" class="button_styles"> <i class="fa-solid fa-user"></i> Profile</button>
-            <button class="button_styles"><i class="fa-solid fa-cake-candles"></i> Twenty</button>
+            <button class="button_styles"><i class="fa-solid fa-cake-candles"></i> Gallery</button>
             <button id="readMeButton" class="button_styles"> <i class="fa-solid fa-envelope"></i> Read Me</button>
         </div>
 
         <div id="profileContent" class="profile_section hidden">
-
                 <div class="profile_image_container">
-                    <img src="assets/02.jpeg" alt="profile_image" class="profile_image" width="200px">
+                    <img src="assets/06.jpeg" alt="profile_image" class="profile_image" width="200px">
                 </div>
                 
                 <div class="profile_text_container">
-                    <h3 class="profile_title">Happy Birthday!</h3>
+                    <h3 class="profile_title">A little about u</h3>
                     <p class="profile_description">
-                        She is the youngest daughter, a girl full of ambition and dreams. With a heart full of determination, she always gives her best in everything she does. For her, family is the greatest source of strength, and every step she takes is guided by her love and devotion to them.
+                        She is the youngest daughter. a girl full of ambition and dreams. With a heart full of determination, she always gives her best in everything she does. For her, family is the greatest source of strength, and every step she takes is guided by her love and devotion to them.
                     </p>
                 </div> 
         </div>
 
-         <div id="twentyContent" class="hidden">
-            <hr class="horzontal_paraloid">
-             <div class="photostrip_viewer">
-                <div class="photostrip_reel">
-                    <img src="assets/01.jpeg" alt="photo 1">
-                    <img src="assets/02.jpeg" alt="photo 2">
-                    <img src="assets/06.jpeg" alt="photo 3">
-                    <img src="assets/04.jpeg" alt="photo 4">
-                </div>
-            </div>
+<div id="twentyContent" class="hidden">
+    <hr class="horzontal_paraloid">
 
-            <button id="collectButton" class="button_collect hidden">COLLECT</button>
+    <div class="photostrip_viewer">
+        <img src="assets/collectParaloid.jpeg" alt="collected photos" class="photostrip_single">
+    </div>  
 
-                <div id="modalOverlay" class="hidden"></div>
+    <!-- Modal overlay -->
+    <div id="modalOverlay" class="hidden"></div>
+
+    <!-- Collected image -->
     <div id="collectedView" class="hidden">
         <img src="assets/collectParaloid.jpeg" alt="collected photos">
     </div>
-                </div>
+</div>
+
                 
                 
               <div id="readMeContent" class="readMe_section hidden">
 
     <div id="readMeInitialView" class="readMe_view">
         <div class="readMe_image_container">
-            <img src="assets/04.jpeg" alt="readMe_image" class="profile_image" width="200px">
+            <img src="assets/01.jpeg" alt="readMe_image" class="profile_image" width="200px">
         </div>
         <div class="readMe_text_container">
-            <h3 class="readMe_title">A Letter For You</h3>
+            <h3 class="readMe_title">Happy birthday!</h3>
             <p class="readMe_description">
-                She is the youngest daughter, a girl full of ambition and dreams...
+                Happy Birthday to the most amazing girll May your day be filled with laughter, love, and endiess happiness. You deserve all the best things in life, and I hope every dream you're chasing comes true. Keep shining, keep smiling and never stop believing in yourself.
             </p>
             <button id="readMeButtonMessage" class="button_styles_readMe"><i class="fa-solid fa-envelope"></i> Read Me</button>
         </div>
@@ -86,14 +81,15 @@
     <div id="readMeEnvelopeView" class="readMe_view hidden">
         <div class="envelope_container">
             <span id="closeEnvelopeButton" class="close_button">&times;</span>
-            <img src="assets/surat1.jpeg" alt="envelope" class="envelope_image"> 
+            <img src="assets/surat1.png" alt="envelope" class="envelope_image"> 
         </div>
-        <button id="collectPostcardButton" class="button_collect">COLLECT</button>
     </div>
 
-    <div id="readMePostcardView" class="readMe_view postcard_view hidden">
-            <span id="closePostcardButton" class="close_button">&times;</span>
-        <img src="assets/surat2.jpeg" alt="postcard" class="postcard_image"> </div>
+<div id="readMePostcardView" class="readMe_view postcard_view hidden">
+    <span id="closePostcardButton" class="close_button">&times;</span>
+    <img src="assets/surat2.png" alt="postcard" class="postcard_image">
+</div>
+
 
 </div>
             </div>
@@ -102,12 +98,10 @@
     </div>
         </div>
 
-        <p class="text_made_with_love">(made with love)</p>
-        <p class="text_with_name">Feliciana Iskandar</p>
-
     </div>
 
-
+  <!-- Audio autoplay -->
+<audio id="bg-music" src="assets/taylor.mp3" loop muted></audio>
 <script src="scripts/index.js"></script>
 </body>
 </html>
