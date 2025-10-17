@@ -1,107 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Feliciana Iskandar</title>
-    <link rel="stylesheet" href="style/index.css">
-    <script src="https://kit.fontawesome.com/e582aba65f.js" crossorigin="anonymous"></script>
-      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Feliciana Iskandar</title>
+  <link rel="stylesheet" href="style/password_page.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="container_text">
-            <p class="happy_birthday_text_header">Happy Birthday Feliciana Iskandar</p>
+  <div class="container">
+    <div class="safe-box">
+      <div class="left">
+        <div class="profile">
+          <img src="assets/01.png" alt="Profile photo">
         </div>
+        <div class="welcome">Feliciana Iskandar</div>
+        <p class="desc">Clue: full date of birth!</p>
+      </div>
 
-        <div class="container_content">
-<div class="image_header_text_only">
-    <div class="text_image_overlay">
-        <p class="overlay_text">Happy 19th!</p>
-        <p class="overlay_text_description">
-           You’re not just growing older — you’re leveling up. <br> Keep shining, chasing dreams, and making every moment count! <br>
-        </p>
-    </div>
-</div>
+      <div class="right">
+        <div class="display-box" id="display"> </div>
+        <div class="dots" id="dots"></div>
 
-
-        <div class="container_button">
-            <button id="profileButton" class="button_styles"> <i class="fa-solid fa-user"></i> Profile</button>
-            <button class="button_styles"><i class="fa-solid fa-cake-candles"></i> Gallery</button>
-            <button id="readMeButton" class="button_styles"> <i class="fa-solid fa-envelope"></i> Read Me</button>
+        <div class="pad">
+          <div class="key">1</div>
+          <div class="key">2</div>
+          <div class="key">3</div>
+          <div class="key">4</div>
+          <div class="key">5</div>
+          <div class="key">6</div>
+          <div class="key">7</div>
+          <div class="key">8</div>
+          <div class="key">9</div>
+          <div class="key zero">0</div>
+          <div class="key enter">Enter</div>
         </div>
-
-        <div id="profileContent" class="profile_section hidden">
-                <div class="profile_image_container">
-                    <img src="assets/06.jpeg" alt="profile_image" class="profile_image" width="200px">
-                </div>
-                
-                <div class="profile_text_container">
-                    <h3 class="profile_title">A little about u</h3>
-                    <p class="profile_description">
-                        She is the youngest daughter. a girl full of ambition and dreams. With a heart full of determination, she always gives her best in everything she does. For her, family is the greatest source of strength, and every step she takes is guided by her love and devotion to them.
-                    </p>
-                </div> 
-        </div>
-
-<div id="twentyContent" class="hidden">
-    <hr class="horzontal_paraloid">
-
-    <div class="photostrip_viewer">
-        <img src="assets/collectParaloid.jpeg" alt="collected photos" class="photostrip_single">
-    </div>  
-
-    <!-- Modal overlay -->
-    <div id="modalOverlay" class="hidden"></div>
-
-    <!-- Collected image -->
-    <div id="collectedView" class="hidden">
-        <img src="assets/collectParaloid.jpeg" alt="collected photos">
-    </div>
-</div>
-
-                
-                
-              <div id="readMeContent" class="readMe_section hidden">
-
-    <div id="readMeInitialView" class="readMe_view">
-        <div class="readMe_image_container">
-            <img src="assets/01.jpeg" alt="readMe_image" class="profile_image" width="200px">
-        </div>
-        <div class="readMe_text_container">
-            <h3 class="readMe_title">Happy birthday!</h3>
-            <p class="readMe_description">
-                Happy Birthday to the most amazing girll May your day be filled with laughter, love, and endiess happiness. You deserve all the best things in life, and I hope every dream you're chasing comes true. Keep shining, keep smiling and never stop believing in yourself.
-            </p>
-            <button id="readMeButtonMessage" class="button_styles_readMe"><i class="fa-solid fa-envelope"></i> Read Me</button>
-        </div>
+      </div>
     </div>
 
-    <div id="readMeEnvelopeView" class="readMe_view hidden">
-        <div class="envelope_container">
-            <span id="closeEnvelopeButton" class="close_button">&times;</span>
-            <img src="assets/surat1.png" alt="envelope" class="envelope_image"> 
-        </div>
+    <div class="copyright">
+      © 2025 Happy Birthday — Powered by Neologic Studio
     </div>
+  </div>
 
-<div id="readMePostcardView" class="readMe_view postcard_view hidden">
-    <span id="closePostcardButton" class="close_button">&times;</span>
-    <img src="assets/surat2.png" alt="postcard" class="postcard_image">
-</div>
-
-
-</div>
-            </div>
-
-        
-    </div>
-        </div>
-
-    </div>
-
-  <!-- Audio autoplay -->
-<audio id="bg-music" src="assets/taylor.mp3" loop muted></audio>
-<script src="scripts/index.js"></script>
+  <script src="scripts/password_page.js"></script>
 </body>
 </html>

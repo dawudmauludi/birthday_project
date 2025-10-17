@@ -106,20 +106,40 @@
     transition: all 0.3s ease;
 }
 
-/* Saat tombol aktif */
-.button_styles.active {
-    background-color: var(--pink-deep); 
-    color: var(--white);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
-    transform: translateY(-2px); 
+.button_styles_collect {
+    /* --- Perbaikan Utama untuk Posisi --- */
+    display: block; /* Jadikan elemen block agar margin auto berfungsi */
+    width: max-content; /* Lebar tombol menyesuaikan isinya */
+    margin: 20px auto 15px auto; /* Atur margin (atas, kanan-kiri, bawah) */
+    
+    /* --- Gaya Asli Anda (sudah bagus) --- */
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px 25px; /* Sedikit lebih lebar agar seimbang */
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--pink-deep);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 10px var(--shadow);
+    transition: all 0.3s ease;
 }
 
-/* Efek saat hover */
-.button_styles:hover {
+/* Efek saat hover (tidak perlu diubah) */
+.button_styles_collect:hover {
     background-color: var(--pink-deep);
     color: var(--white);
     transform: translateY(-3px);
     box-shadow: 0 12px 15px rgba(255, 143, 183, 0.45);
+}
+
+/* Saat tombol aktif (tidak perlu diubah) */
+.button_styles_collect.active {
+    background-color: var(--pink-deep); 
+    color: var(--white);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+    transform: translateY(-2px); 
 }
 
 .text_made_with_love{
@@ -188,6 +208,59 @@
     line-height: 1.6;
 }
 
+
+/* Latar belakang gelap (overlay) */
+#modalOverlay {
+    position: fixed; /* Tetap di layar, menutupi semua konten */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Hitam transparan */
+    z-index: 999; /* Pastikan di bawah modal, tapi di atas konten lain */
+    opacity: 1;
+    transition: opacity 0.4s ease; /* Transisi halus saat muncul/hilang */
+}
+
+/* Penampung gambar yang di-collect (modal) */
+#collectedView {
+    position: fixed; /* Tetap di layar */
+    top: 50%;
+    left: 50%;
+    z-index: 1000; /* Tampil di atas overlay */
+    
+    /* Properti untuk animasi */
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Posisi akhir: di tengah */
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Transisi untuk animasi */
+
+    /* Tambahan styling agar terlihat bagus */
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Gambar di dalam modal */
+#collectedView img {
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+    border-radius: 8px;
+}
+
+
+/* Kondisi saat elemen disembunyikan */
+#modalOverlay.hidden,
+#collectedView.hidden {
+    opacity: 0; /* Buat jadi transparan */
+    pointer-events: none; /* Tidak bisa diklik saat tersembunyi */
+}
+
+/* Khusus untuk #collectedView saat tersembunyi */
+#collectedView.hidden {
+    /* Posisi awal: di tengah secara horizontal, tapi di atas layar */
+    transform: translate(-50%, -150%) scale(0.9); 
+}
+
 .postcard_view {
     position: absolute;
     top: 0;
@@ -227,6 +300,9 @@
     color: white;
     position: relative; /* untuk tombol close */
     transition: all 0.3s ease;
+}
+.readMe_view.hidden {
+  display: none;
 }
 
 .readMe_image_container {
@@ -311,6 +387,28 @@
 .close_button:hover {
     background: rgba(255, 255, 255, 0.4);
     transform: scale(1.1);
+}
+
+
+.close-buttons {
+    position: absolute; /* Mengambang di dalam parent-nya */
+    top: 8px;           /* Jarak dari atas */
+    right: 15px;          /* Jarak dari kanan */
+    font-size: 2rem;      /* Ukuran ikon 'X' */
+    font-weight: bold;
+    color: var(--pink-deep);          /* Warna ikon */
+    background-color: var(--white);
+    padding: 2px;
+    border-radius: 5px;  /* Membuatnya bulat */
+    cursor: pointer;      /* Mengubah cursor menjadi tangan saat di-hover */
+    line-height: 1;       /* Menyesuaikan tinggi baris agar rapi */
+    transition: transform 0.2s ease, color 0.2s ease; /* Animasi halus */
+}
+
+/* Efek saat cursor diarahkan ke tombol silang */
+.close-buttons:hover {
+    color: var(--pink-deep); /* Ganti warna saat di-hover (gunakan warna tema Anda) */
+    transform: scale(1.1);   /* Sedikit memperbesar ikon */
 }
 
 .envelope_container {

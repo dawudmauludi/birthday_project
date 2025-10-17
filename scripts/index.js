@@ -16,6 +16,7 @@ const profileButton = document.getElementById('profileButton');
 const twentyButton = document.querySelector('.container_button button:nth-child(2)');
 const readMeButton = document.getElementById('readMeButton');
 const collectButton = document.getElementById('collectButton');
+const closeCollectViewButton = document.getElementById('closeCollectView');
 
 // Konten
 const profileContent = document.getElementById('profileContent');
@@ -49,6 +50,16 @@ function resetAll() {
     collectButton?.classList.add('hidden');
 }
 
+function showCollectModal() {
+    modalOverlay.classList.remove('hidden');
+    collectedView.classList.remove('hidden');
+}
+
+function hideCollectModal() {
+    modalOverlay.classList.add('hidden');
+    collectedView.classList.add('hidden');
+}
+
 // --- Event Profile ---
 profileButton.addEventListener('click', () => {
     const isActive = profileButton.classList.contains('active');
@@ -79,6 +90,23 @@ twentyButton.addEventListener('click', () => {
         collectButton.classList.remove('hidden'); // tampilkan tombol collect
     }
 });
+
+
+// --- Event Tombol Collect di "Twenty" (Toggle Function) ---
+collectButton.addEventListener('click', () => {
+    if (collectedView.classList.contains('hidden')) {
+        showCollectModal();
+    } else {
+        hideCollectModal();
+    }
+});
+
+
+
+closeCollectViewButton.addEventListener('click', hideCollectModal);
+
+// Event untuk overlay gelap (HANYA untuk menutup)
+modalOverlay.addEventListener('click', hideCollectModal);
 
 // --- Read Me ButtonMessage: buka amplop ---
 readMeButtonMessage.addEventListener('click', () => {
